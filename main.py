@@ -7,6 +7,7 @@ from jinja2 import Environment,FileSystemLoader
 
 urls = (
     '/index.html', 'index',
+    '/login.html', 'login',
     '/products.html', 'products',
     '/contact.html', 'contact',
 )
@@ -35,6 +36,9 @@ render = render_jinja(TEMPLATE, encoding = 'utf-8')
 #     #jinja_env.update_template_context(context)
 #     return jinja_env.get_template(index1).render(context)
 
+class login:
+    def GET(self):
+       return render.login()
 
 class index:
     def GET(self):
